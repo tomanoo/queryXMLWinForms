@@ -9,20 +9,21 @@ namespace queryXMLWinForms
     public class Question
     {
         private string question;
-        private List<string> answers = new List<string>();
-        private string[] ans;
+        private string[] answers;
+        private string[] correctAnswers;
         private int howManyAnswers;
-        public Question(string question, string[] answers, int howManyAnswers)
+        public Question(string question, string[] answers, string[] correctAnswers, int howManyAnswers)
         {
             this.question = question;
-            this.ans = answers;
+            this.answers = answers;
+            this.correctAnswers = correctAnswers;
             this.howManyAnswers = howManyAnswers;
         }
         public string getQuestion()
         {
             return question;
         }
-        public List<string> getAnswers()
+        public string[] getAnswers()
         {
             return answers;
         }
@@ -30,17 +31,13 @@ namespace queryXMLWinForms
         {
             return answers[i];
         }
+        public string[] getCorrectAnswers()
+        {
+            return correctAnswers;
+        }
         public int getHowManyAnswers()
         {
             return howManyAnswers;
-        }
-        public string[] getAns()
-        {
-            return ans;
-        }
-        public string getAnss(int i)
-        {
-            return ans[i];
         }
     }
 }

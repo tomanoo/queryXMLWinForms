@@ -64,7 +64,6 @@
             // 
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.Location = new System.Drawing.Point(122, 104);
-            this.listView1.Margin = new System.Windows.Forms.Padding(8);
             this.listView1.MinimumSize = new System.Drawing.Size(400, 250);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(400, 250);
@@ -113,6 +112,7 @@
             this.loadQuiz.TabIndex = 11;
             this.loadQuiz.Text = "Load";
             this.loadQuiz.UseVisualStyleBackColor = true;
+            this.loadQuiz.Click += new System.EventHandler(this.loadQuiz_Click);
             // 
             // Form1
             // 

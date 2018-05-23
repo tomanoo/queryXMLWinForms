@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test Title="Tytuł testu" Author="Autor testu">
+  <Questions>
+    
+    <Question>
+      <Text>2 + 2 * 2 = ?</Text>
+      <Answers>
+        <Answer Correct="False">
+          <Text>2</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>4</Text>
+        </Answer>
+        <Answer Correct="True">
+          <Text>6</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>8</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>?</Text>
+        </Answer>
+      </Answers>
+    </Question>
+	<Question>
+      <Text>3 + 3 * 3 = ?</Text>
+      <Answers>
+		<Answer Correct="False">
+          <Text>3</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>6</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>9</Text>
+        </Answer>
+        <Answer Correct="True">
+          <Text>12</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>?</Text>
+        </Answer>
+	  </Answers
+    </Question>
+    <Question>
+      <Text>Treść pytania...</Text>
+      <Answers />
+    </Question>
+    <Question>
+      <Text>Treść pytania...</Text>
+      <Answers />
+    </Question>
+  </Questions>
+</Test>

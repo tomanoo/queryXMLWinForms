@@ -1,0 +1,9 @@
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.csprojResolveAssemblyReference.cache
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.Form1.resources
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.Properties.Resources.resources
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.csproj.GenerateResource.Cache
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.exe.config
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.exe
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.pdb
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.exe
+c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.pdb

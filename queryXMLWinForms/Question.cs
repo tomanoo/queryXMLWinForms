@@ -11,12 +11,13 @@ namespace queryXMLWinForms
         private string question;
         private string[] answers;
         private string[] correctAnswers;
+        private string correctAnswer;
         private int howManyAnswers;
-        public Question(string question, string[] answers, string[] correctAnswers, int howManyAnswers)
+        public Question(string question, string[] answers, string correctAnswer, int howManyAnswers)
         {
             this.question = question;
             this.answers = answers;
-            this.correctAnswers = correctAnswers;
+            this.correctAnswer = correctAnswer;
             this.howManyAnswers = howManyAnswers;
         }
         public string getQuestion()
@@ -31,9 +32,17 @@ namespace queryXMLWinForms
         {
             return answers[i];
         }
+        public string getCorrectAnswer()
+        {
+            return correctAnswer;
+        }
         public string[] getCorrectAnswers()
         {
             return correctAnswers;
+        }
+        public string getCorrectAnswer(int i)
+        {
+            return correctAnswers[i];
         }
         public int getHowManyAnswers()
         {

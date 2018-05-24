@@ -30,9 +30,9 @@
         {
             this.lblQuestion = new System.Windows.Forms.Label();
             this.nextQuestion = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.answerList = new System.Windows.Forms.ListView();
             this.previousQuestion = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkAnswers = new System.Windows.Forms.Button();
             this.quizList = new System.Windows.Forms.ListView();
             this.loadQuiz = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,7 +46,6 @@
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(400, 70);
             this.lblQuestion.TabIndex = 0;
-            this.lblQuestion.Text = "lblQuestion";
             // 
             // nextQuestion
             // 
@@ -60,16 +59,17 @@
             this.nextQuestion.UseVisualStyleBackColor = true;
             this.nextQuestion.Click += new System.EventHandler(this.nextQuestion_Click);
             // 
-            // listView1
+            // answerList
             // 
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listView1.Location = new System.Drawing.Point(122, 104);
-            this.listView1.MinimumSize = new System.Drawing.Size(400, 250);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(400, 250);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
+            this.answerList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.answerList.Location = new System.Drawing.Point(122, 104);
+            this.answerList.MinimumSize = new System.Drawing.Size(400, 250);
+            this.answerList.Name = "answerList";
+            this.answerList.Size = new System.Drawing.Size(400, 250);
+            this.answerList.TabIndex = 7;
+            this.answerList.UseCompatibleStateImageBehavior = false;
+            this.answerList.View = System.Windows.Forms.View.List;
+            this.answerList.SelectedIndexChanged += new System.EventHandler(this.answerList_SelectedIndexChanged);
             // 
             // previousQuestion
             // 
@@ -83,16 +83,17 @@
             this.previousQuestion.UseVisualStyleBackColor = true;
             this.previousQuestion.Click += new System.EventHandler(this.previousQuestion_Click);
             // 
-            // button1
+            // checkAnswers
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(422, 360);
-            this.button1.MinimumSize = new System.Drawing.Size(100, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Finish";
-            this.button1.UseVisualStyleBackColor = true;
+            this.checkAnswers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkAnswers.Location = new System.Drawing.Point(422, 360);
+            this.checkAnswers.MinimumSize = new System.Drawing.Size(100, 40);
+            this.checkAnswers.Name = "checkAnswers";
+            this.checkAnswers.Size = new System.Drawing.Size(100, 40);
+            this.checkAnswers.TabIndex = 9;
+            this.checkAnswers.Text = "Finish";
+            this.checkAnswers.UseVisualStyleBackColor = true;
+            this.checkAnswers.Click += new System.EventHandler(this.checkAnswers_Click);
             // 
             // quizList
             // 
@@ -121,9 +122,9 @@
             this.ClientSize = new System.Drawing.Size(534, 412);
             this.Controls.Add(this.loadQuiz);
             this.Controls.Add(this.quizList);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkAnswers);
             this.Controls.Add(this.previousQuestion);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.answerList);
             this.Controls.Add(this.nextQuestion);
             this.Controls.Add(this.lblQuestion);
             this.MinimumSize = new System.Drawing.Size(550, 450);
@@ -138,9 +139,9 @@
 
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.Button nextQuestion;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView answerList;
         private System.Windows.Forms.Button previousQuestion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checkAnswers;
         private System.Windows.Forms.ListView quizList;
         private System.Windows.Forms.Button loadQuiz;
     }

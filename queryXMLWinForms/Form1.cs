@@ -14,35 +14,33 @@ namespace queryXMLWinForms
 {
     public partial class Form1 : Form
     {
-        private XmlDocument doc;
-        private XmlNode theQuiz;
         private List<Question> questions = new List<Question>();
-        private string name;
-        private List<string> labelsText = new List<string>();
         List<string> answers;
         List<string> correctAnswers;
         private string correctAnswer;
         static int x = 0;
-        string[] quizes = Directory.GetFiles(Directory.GetCurrentDirectory());
         string currentQuiz;
         string[] userAnswers = new string[100];
+        string loadedQuiz;
         int score = 0;
 
-        public Form1(string docName)
+        public Form1()
         {
             InitializeComponent();
-            doc = new XmlDocument();
-            doc.Load(docName);
             answers = new List<string>();
             correctAnswers = new List<string>();
             for (int i = 0; i < 100; i++)
                 userAnswers[i] = "";
-            name = docName;
             loadQuizes();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        private void quizList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentQuiz = quizList.FocusedItem.Text;
         }
 
         private void loadQuizes()
@@ -58,24 +56,31 @@ namespace queryXMLWinForms
         }
         private void loadQuiz_Click(object sender, EventArgs e)
         {
-            try
+            if (loadedQuiz != currentQuiz)
             {
-                lblQuestion.Text = "";
-                answerList.Items.Clear();
-                currentQuiz = quizList.FocusedItem.Text;
-                loadQuestions();
-                x = 0;
-                displayQuestion(x);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Please, choose one of the quizes!");
+                try
+                {
+                    x = 0;
+                    lblQuestion.Text = "";
+                    answerList.Clear();
+                    answerList.Items.Clear();
+                    loadQuestions();
+                    displayQuestion(x);
+                    loadedQuiz = currentQuiz;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please, choose one of the quizes!");
+                }
             }
         }
 
         private void loadQuestions()
         {
             string question = "";
+            answerList.Clear();
+            answerList.Items.Clear();
+            lblQuestion.Text = "";
 
             XmlReader reader = XmlReader.Create(currentQuiz);
             bool flag = false;
@@ -131,11 +136,14 @@ namespace queryXMLWinForms
                     }
                 }
             }
+            reader.Close();
         }
 
         private void displayQuestion(int x)
         {
             answerList.Items.Clear();
+            lblQuestion.Text = "";
+            answerList.Clear();
 
             lblQuestion.Text = x + 1 + ". " + questions[x].getQuestion();
 
@@ -148,20 +156,16 @@ namespace queryXMLWinForms
 
         private void nextQuestion_Click(object sender, EventArgs e)
         {
-          //  userAnswers[x] = answerList.FocusedItem.Text;
             if (x + 1 < questions.Count)
             {
-                //   userAnswers.Insert(x, answerList.FocusedItem.Text);
                 displayQuestion(++x);
             }
         }
 
         private void previousQuestion_Click(object sender, EventArgs e)
         {
-        //    userAnswers[x] = answerList.FocusedItem.Text;
             if (x - 1 >= 0)
             {
-            //    userAnswers.Insert(x, answerList.FocusedItem.Text);
                 displayQuestion(--x);
             }
         }
@@ -178,15 +182,13 @@ namespace queryXMLWinForms
                 }
             }
             MessageBox.Show("Your score: " + score + "/" + questions.Count);
-        }
-        private void setAnswer()
-        {
-           // answeros[x]
+            score = 0;
         }
 
         private void answerList_SelectedIndexChanged(object sender, EventArgs e)
         {
             userAnswers[x] = answerList.FocusedItem.Text;
         }
+
     }
 }

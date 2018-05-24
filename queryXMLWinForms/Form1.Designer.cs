@@ -102,6 +102,7 @@
             this.quizList.Size = new System.Drawing.Size(100, 300);
             this.quizList.TabIndex = 10;
             this.quizList.UseCompatibleStateImageBehavior = false;
+            this.quizList.SelectedIndexChanged += new System.EventHandler(this.quizList_SelectedIndexChanged);
             // 
             // loadQuiz
             // 

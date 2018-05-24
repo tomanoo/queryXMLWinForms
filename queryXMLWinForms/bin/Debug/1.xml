@@ -1,19 +1,54 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<quiz>
-  <problem>
-    <question>Which of the following languages could be used in both Visual Studio and Unity?</question>
-    <answerA>Cobol</answerA>
-    <answerB>C#</answerB>
-    <answerC>C--</answerC>
-    <answerD>French</answerD>
-    <correct>B</correct>
-  </problem>
-  <problem>
-    <question>What does XML stand for?</question>
-    <answerA>eXtremely Muddy Language</answerA>
-    <answerB>Xerxes, the Magnificent Chameleon</answerB>
-    <answerC>eXtensible Markup Language</answerC>
-    <answerD>eXecutes with Multiple Limitations</answerD>
-    <correct>C</correct>
-  </problem>
-</quiz>
+<?xml version="1.0" encoding="utf-8"?>
+<Test Title="Tytuł testu" Author="Autor testu">
+  <Questions>
+    <Question>
+      <Text>4 + 2 * 2 = ?</Text>
+      <Answers>
+        <Answer Correct="False">
+          <Text>2</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>4</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>6</Text>
+        </Answer>
+        <Answer Correct="True">
+          <Text>8</Text>
+        </Answer>
+      </Answers>
+    </Question>
+	<Question>
+      <Text>6 + 3 * 3 = ?</Text>
+      <Answers>
+		<Answer Correct="True">
+          <Text>15</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>6</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>16</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>12</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>?</Text>
+        </Answer>
+	  </Answers>
+    </Question>
+    <Question>
+      <Text>Treść pytania...</Text>
+      <Answers>
+		<Answer>
+			<Text>x</Text>
+		</Answer>
+	  </Answers>
+    </Question>
+    <Question>
+      <Text>Treść pytania...</Text>
+      <Answers />
+    </Question>
+  </Questions>
+</Test>

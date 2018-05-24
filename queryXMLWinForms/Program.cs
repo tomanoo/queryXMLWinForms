@@ -16,7 +16,7 @@ namespace queryXMLWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1("das.xml"));
+            Application.Run(new Form1());
         }
     }
 }

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<Test Title="Teścik sobie taki" Author="Konstantynopolitańczykowianeczka">
+  <Questions>
+    <Question>
+      <Text>Czy tak?</Text>
+      <Answers>
+        <Answer Correct="True">
+          <Text>Prawda</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>Fałsz</Text>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <Text>Kto najbliżej?</Text>
+      <Answers>
+        <Answer Correct="False">
+          <Text>Pampers</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>Colagate</Text>
+        </Answer>
+        <Answer Correct="True">
+          <Text>Mniejsza</Text>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <Text>W jakim języku ten program jest napisany?</Text>
+      <Answers>
+        <Answer Correct="True">
+          <Text>C Hash</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>Dżif</Text>
+        </Answer>
+        <Answer Correct="False">
+          <Text>Ketchup Kotlin</Text>
+        </Answer>
+      </Answers>
+    </Question>
+  </Questions>
+</Test>

@@ -7,3 +7,12 @@ c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWi
 c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.pdb
 c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.exe
 c:\users\tomek\documents\visual studio 2017\Projects\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.pdb
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.exe.config
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.exe
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.pdb
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.exe
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\bin\Debug\queryXMLWinForms.pdb
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.csprojResolveAssemblyReference.cache
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.Form1.resources
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.Properties.Resources.resources
+Z:\queryXML\queryXMLWinForms\queryXMLWinForms\obj\Debug\queryXMLWinForms.csproj.GenerateResource.Cache

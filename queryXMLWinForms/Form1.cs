@@ -64,6 +64,7 @@ namespace queryXMLWinForms
                     lblQuestion.Text = "";
                     answerList.Clear();
                     answerList.Items.Clear();
+                    questions.Clear();
                     loadQuestions();
                     displayQuestion(x);
                     loadedQuiz = currentQuiz;
@@ -95,15 +96,7 @@ namespace queryXMLWinForms
                 {
                     if (reader.Name == "Question")
                     {
-                        if (flag)
-                        {
-                            questions.Add(new Question(question, answers.ToArray(), correctAnswer, answers.Count));
-                            flag = false;
-                            correctFlag = false;
-                            i = 0;
-                            answers.Clear();
-                            correctAnswers.Clear();
-                        }
+                        
 
                         reader.Read();
                         reader.Read();
@@ -133,6 +126,18 @@ namespace queryXMLWinForms
                             i++;
                             flag = true;
                         }
+                    }
+                }
+                else if (reader.Name == "Question")
+                {
+                    if (flag)
+                    {
+                        questions.Add(new Question(question, answers.ToArray(), correctAnswer, answers.Count));
+                        flag = false;
+                        correctFlag = false;
+                        i = 0;
+                        answers.Clear();
+                        correctAnswers.Clear();
                     }
                 }
             }
@@ -174,11 +179,15 @@ namespace queryXMLWinForms
         {
             for (int i=0; i<questions.Count; i++)
             {
-                MessageBox.Show(userAnswers[i]);
-                MessageBox.Show(questions[i].getCorrectAnswer());
                 if (userAnswers[i] == questions[i].getCorrectAnswer())
                 {
                     score++;
+                }
+                else
+                {
+                    MessageBox.Show(i+1 + ". " + questions[i].getQuestion() + 
+                        "\nYour answer: " + userAnswers[i] + "\nCorrect answer: " + 
+                        questions[i].getCorrectAnswer());
                 }
             }
             MessageBox.Show("Your score: " + score + "/" + questions.Count);

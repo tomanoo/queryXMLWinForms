@@ -35,11 +35,11 @@
             this.checkAnswers = new System.Windows.Forms.Button();
             this.quizList = new System.Windows.Forms.ListView();
             this.loadQuiz = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblQuestion
             // 
-            this.lblQuestion.AutoSize = true;
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblQuestion.Location = new System.Drawing.Point(122, 21);
             this.lblQuestion.MinimumSize = new System.Drawing.Size(400, 70);
@@ -61,6 +61,8 @@
             // 
             // answerList
             // 
+            this.answerList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
             this.answerList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.answerList.Location = new System.Drawing.Point(122, 104);
             this.answerList.MinimumSize = new System.Drawing.Size(400, 250);
@@ -68,7 +70,7 @@
             this.answerList.Size = new System.Drawing.Size(400, 250);
             this.answerList.TabIndex = 7;
             this.answerList.UseCompatibleStateImageBehavior = false;
-            this.answerList.View = System.Windows.Forms.View.List;
+            this.answerList.View = System.Windows.Forms.View.Details;
             this.answerList.SelectedIndexChanged += new System.EventHandler(this.answerList_SelectedIndexChanged);
             // 
             // previousQuestion
@@ -116,6 +118,11 @@
             this.loadQuiz.UseVisualStyleBackColor = true;
             this.loadQuiz.Click += new System.EventHandler(this.loadQuiz_Click);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 394;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,7 +139,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,6 +151,7 @@
         private System.Windows.Forms.Button checkAnswers;
         private System.Windows.Forms.ListView quizList;
         private System.Windows.Forms.Button loadQuiz;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 

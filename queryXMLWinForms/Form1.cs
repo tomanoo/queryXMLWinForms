@@ -31,6 +31,7 @@ namespace queryXMLWinForms
         string[] userAnswers = new string[100];
         string loadedQuiz;
         int score = 0;
+        
 
         public Form1()
         {
@@ -70,8 +71,9 @@ namespace queryXMLWinForms
                 {
                     x = 0;
                     lblQuestion.Text = "";
-                    answerList.Clear();
+                    //answerList.Clear();
                     answerList.Items.Clear();
+                   // answerList.View = View.Details;
                     questions.Clear();
                     loadQuestions();
                     displayQuestion(x);
@@ -87,7 +89,7 @@ namespace queryXMLWinForms
         private void loadQuestions()
         {
             string question = "";
-            answerList.Clear();
+            //answerList.Clear();
             answerList.Items.Clear();
             lblQuestion.Text = "";
 
@@ -156,7 +158,7 @@ namespace queryXMLWinForms
         {
             answerList.Items.Clear();
             lblQuestion.Text = "";
-            answerList.Clear();
+            //answerList.Clear();
 
             lblQuestion.Text = x + 1 + ". " + questions[x].getQuestion();
 

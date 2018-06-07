@@ -10,6 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
+//
+//      TO DO
+//
+//
+//      Solve problems listView - setting View property to Details (to display questions one by one in a column
+//      instead of a row) instead of List results in not showing listView.Items at all
+//
+
 namespace queryXMLWinForms
 {
     public partial class Form1 : Form
@@ -177,21 +185,15 @@ namespace queryXMLWinForms
 
         private void checkAnswers_Click(object sender, EventArgs e)
         {
-            for (int i=0; i<questions.Count; i++)
+            answerList.Items.Clear();
+            lblQuestion.Text = "You scored: " + score + "/" + questions.Count;
+            for (int i = 0; i < questions.Count; i++)
             {
-                if (userAnswers[i] == questions[i].getCorrectAnswer())
-                {
-                    score++;
-                }
-                else
-                {
-                    MessageBox.Show(i+1 + ". " + questions[i].getQuestion() + 
-                        "\nYour answer: " + userAnswers[i] + "\nCorrect answer: " + 
-                        questions[i].getCorrectAnswer());
-                }
+                answerList.Items.Add(i+1 + ". " + questions[i].getQuestion());
+                answerList.Items.Add("Your answer: " + userAnswers[i]);
+                answerList.Items.Add("Correct answer: " + questions[i].getCorrectAnswer());
+                answerList.Items.Add("\n");
             }
-            MessageBox.Show("Your score: " + score + "/" + questions.Count);
-            score = 0;
         }
 
         private void answerList_SelectedIndexChanged(object sender, EventArgs e)
